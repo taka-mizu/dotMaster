@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="UTF-8">
+	<meta name="description" content="Placing a random one image, so as not to overlap as much as possible.">
+	<meta name="keywords" content="random,elements,jquery-plugin">
+	<title>jquery.randomElements</title>
+</head>
+<body id="index">
+
+	<input type="file" id="selectfile">
+	<button type="button" id="dotButton">押すと選択範囲のドット絵を作成</button>
+	<div id="imgBox">
+		<img src="img/image.jpg" alt="" id="test" draggable="auto">
+		<div id="target"></div>
+	</div>
+	<canvas id="imageProjector"></canvas>
+	<script src="./js/lodash.js"></script>
+	<script src="./js/jquery.js"></script>
+	<script src="../dist/js/jquery.dotMaster.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			
+		})
+	</script>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+}
+html,
+body {
+	height: 100%;
+	width: 100%;
+/*	background: -webkit-linear-gradient(#79e6f7 0%, #e9deb9 100%)*/
+}
+	button {
+		padding: 10px;
+		margin: 10px;
+		cursor: pointer;
+	}
+	#imgBox {
+		margin: 0;
+		padding: 0;
+		position: relative;
+		overflow: hidden;
+	}
+	img {
+		margin: 0;
+		padding: 0;
+		cursor: pointer;
+	}
+	#target {
+		width: 0;
+		height: 0;
+		background-color: transparent;
+		border-style: solid;
+		border-color: rgba(0,0,0,.5);
+		border-width: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
+	}
+</style>
+</body>
+</html>

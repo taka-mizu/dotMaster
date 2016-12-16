@@ -446,8 +446,8 @@ fileopen = function (exports, _canvas, _targetPoint) {
           img.attr('src', image);
           canvas.drowImage({
             image: img[0],
-            x: 0,
-            y: 0
+            rectPoint: target.getRectPoint({}),
+            rectSize: target.getRectSize({})
           });
           canvas.createDot(30, 30);
         });
